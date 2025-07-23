@@ -1,0 +1,14 @@
+# robots.txt for portfolio website
+User-agent: *
+Disallow: /assets/js/
+Disallow: /.git/
+Disallow: /.htaccess
+Disallow: /error_log
+Disallow: /cgi-bin/
+
+# Allow CSS and images
+Allow: /assets/css/
+Allow: /assets/img/
+
+# Sitemap location (if you create one in the future)
+# Sitemap: https://yourdomain.com/sitemap.xml
