@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website - Blog Details</title>
+    <!-- Security Headers -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ====== Remixicons ====== -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <!-- ====== Css ====== -->
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/skins/color-1.css"/>
+
+    <!-- ====== Skin Colors ====== -->
+    <link rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+
+    <!-- ====== Demo Styles (Replace with your actual CSS files) ====== -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .nav__list {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav__link {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav__link:hover {
+            color: #007bff;
+        }
+
+        .nav__toggle, .nav__close {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Blog Styles */
+        .blog__header {
+            height: 80px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .blog__details {
+            background: #fff;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .back__to-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .post__details-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .post__details-date {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .post__details {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        figure {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        figcaption {
+            margin-top: 0.5rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Newsletter Styles */
+        .newsletter {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            margin: 3rem 0;
+            border-radius: 15px;
+        }
+
+        .section__title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .newsletter__container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter__description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .newsletter__form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .newsletter__input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .newsletter__input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            min-width: 250px;
+        }
+
+        .newsletter__input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+        }
+
+        .newsletter__button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .newsletter__button:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        .newsletter__button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .newsletter__message {
+            margin-top: 1rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .newsletter__message.success {
+            background: rgba(40, 167, 69, 0.2);
+            color: #28a745;
+            border: 1px solid rgba(40, 167, 69, 0.3);
+        }
+
+        .newsletter__message.error {
+            background: rgba(220, 53, 69, 0.2);
+            color: #dc3545;
+            border: 1px solid rgba(220, 53, 69, 0.3);
+        }
+
+        .newsletter__security-info {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        /* Contact Styles */
+        .contact {
+            background: #fff;
+            padding: 4rem 0;
+            margin: 2rem 0;
+        }
+
+        .contact__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact__info h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .contact__list {
+            margin-bottom: 2rem;
+        }
+
+        .contact__list dt {
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 1rem;
+        }
+
+        .contact__list dd {
+            margin-left: 0;
+            color: #666;
+        }
+
+        .contact__socials {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .contact__social-link {
+            color: #007bff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid #007bff;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .contact__social-link:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        .contact__form-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .contact__security-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .contact__input-div {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact__input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .contact__input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact__button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact__button:hover {
+            background: #0056b3;
+        }
+
+        .contact__message {
+            margin: 1rem 0;
+            color: #666;
+        }
+
+        .footer__copy {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+        }
+
+        /* Share Styles */
+        .post-share-container {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .share-button {
+            position: relative;
+            display: inline-block;
+        }
+
+        .share-button > span {
+            background: #007bff;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background 0.3s;
+        }
+
+        .share-button:hover > span {
+            background: #0056b3;
+        }
+
+        .share-options {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            display: none;
+            gap: 0.5rem;
+        }
+
+        .share-button:hover .share-options {
+            display: flex;
+        }
+
+        .share-options a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s;
+        }
+
+        .share-options a:hover {
+            transform: scale(1.1);
+        }
+
+        .facebook { background: #1877f2; }
+        .twitter { background: #000; }
+        .linkedin { background: #0077b5; }
+
+        /* Animations */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .animate-spin {
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+
+        /* Utility Classes */
+        .text-xs { font-size: 0.75rem; }
+        .text-sm { font-size: 0.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .grid { display: grid; }
+        .section { padding: 2rem 0; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav__menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: white;
+                padding: 2rem;
+                transition: right 0.3s;
+                box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            }
+
+            .nav__menu.show-menu {
+                right: 0;
+            }
+
+            .nav__list {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav__toggle, .nav__close {
+                display: block;
+            }
+
+            .nav__close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .newsletter__input-group {
+                flex-direction: column;
+            }
+
+            .newsletter__input {
+                min-width: unset;
+            }
+
+            .contact__container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .post__details-title {
+                font-size: 1.5rem;
+            }
+
+            .section__title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+     </header>
+
+     <!-- ====== Blog Details ====== -->
+      <div class="blog__header"></div>
+
+      <section class="container">
+        <div class="blog__details">
+            <a href="index.html#blog" class="back__to-home text-xs">
+                <i class="ri-arrow-left-line"></i> Back
+            </a>
+            <h3 class="post__details-title text-lg">SVG SPRITES VS ICON FONT</h3>
+            <p class="post__details-date text-sm">November 26, 2017</p>
+            <p class="post__details text-lg">
+                This comprehensive guide explores the ongoing debate between SVG Sprites and Icon Fonts in modern web development. Both approaches have their unique advantages and specific use cases that make them suitable for different project requirements.
+            </p>
+
+            <figure>
+                <img src="assets/img/project-3.png" alt="SVG Sprites vs Icon Font Comparison">
+                <figcaption class="text-sm">
+                    Visual comparison between SVG sprites and icon fonts implementation
+                </figcaption>
+            </figure>
+
+            <p class="post__details text-lg">
+                SVG sprites offer superior scalability, better accessibility, and more styling flexibility through CSS. They provide crisp rendering at any size and support multicolor designs. Icon fonts, while lightweight and easy to implement, can face rendering inconsistencies and accessibility challenges. The choice between them often depends on project complexity, design requirements, and browser support needs.
+            </p>
+
+            <div class="post-share-container">
+                <div class="share-button">
+                    <span><i class="ri-share-line"></i> Share</span>
+                    <div class="share-options">
+                        <a href="#" aria-label="Share on Facebook" class="facebook"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Share on Twitter" class="twitter"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="Share on LinkedIn" class="linkedin"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- ====== Newsletter Subscription ====== -->
+        <section class="newsletter section container">
+            <h2 class="section__title">Subscribe to Newsletter_</h2>
+            
+            <div class="newsletter__container">
+                <p class="newsletter__description text-lg">
+                Stay updated with my latest blog posts and projects. Subscribe to my newsletter.
+                </p>
+                
+                <form id="newsletter-form" class="newsletter__form" name="submit-to-google-sheet">
+                <div class="newsletter__input-group">
+                    <input 
+                    type="email" 
+                    name="Email" 
+                    placeholder="Your email address" 
+                    class="newsletter__input" 
+                    id="newsletter-email"
+                    required
+                    aria-label="Email address for newsletter subscription"
+                    >
+                    <button type="submit" class="newsletter__button" id="newsletter-submit-btn">
+                    <i class="ri-send-plane-line" id="submit-icon"></i> SUBSCRIBE
+                    </button>
+                </div>
+                <div class="newsletter__message" id="newsletter-message" aria-live="polite"></div>
+                <p class="newsletter__security-info text-xs">
+                    Your privacy is our priority. We respect your inbox and will only send meaningful updates.
+                </p>
+                <!-- Honeypot field for bot protection -->
+                <input type="text" name="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+                </form>
+            </div>
+        </section>
+
+      <!-- ====== Contacts ====== -->
+      <section class="contact section" id="contact">
+        <div class="contact__content container">
+            <h2 class="section__title">Get in touch_</h2>
+            
+            <div class="contact__container grid">
+                <div class="contact__info">
+                    <h3>Contact Information</h3>
+                    <dl class="contact__list">
+                        <dt>Phone:</dt>
+                        <dd>+254 770 600886</dd>
+                        <dt>Skype:</dt>
+                        <dd>iamnicholus</dd>
+                        <dt>Email:</dt>
+                        <dd>muthominicholus22@gmail.com</dd>
+                    </dl>
+
+                    <ul class="contact__socials">
+                        <li>
+                            <a href="https://wa.me/+254770600886" class="contact__social-link">WhatsApp</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/nicholus-muthomi/in/nicholus-muthomi/" class="contact__social-link">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/NicholusMuthomi/" class="contact__social-link">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact__form">
+                    <p class="contact__form-title">Or just write me a letter here_</p>
+                    <p class="contact__security-info">All messages are encrypted in transit</p>
+
+                    <form action="" id="contact-form">
+                        <div class="contact__input-div">
+                            <input type="text" name="from_name" placeholder="Your name" class="contact__input" id="contact-name" required minlength="2" maxlength="50">
+                        </div>
+
+                        <div class="contact__input-div">
+                            <input type="email" name="reply_to" placeholder="Your e-mail" class="contact__input" id="contact-email" required>
+                        </div>
+
+                        <div class="contact__input-div">
+                            <textarea name="message" placeholder="Type the message here" class="contact__input textarea" id="message" cols="30" rows="10" required minlength="10" maxlength="3000"></textarea>
+                        </div>
+
+                        <p class="contact__message text-sm" id="contact-message"></p>
+
+                        <button type="submit" class="contact__button">SEND</button>
+                    </form>
+
+                    <p class="footer__copy">&copy; 2025 Nicholus Muthomi. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- ====== Newsletter Google Sheets Integration Script ====== -->
+      <script>
+        // Newsletter Configuration - Exact logic from index.html
+        const NEWSLETTER_CONFIG = {
+            MIN_EMAIL_LENGTH: 5,
+            MAX_EMAIL_LENGTH: 100,
+            EMAIL_REGEX: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            COOLDOWN_PERIOD: 30000, // 30 seconds
+            SUCCESS_MESSAGE_DURATION: 5000 // 5 seconds
+        };
+
+        // DOM Elements
+        const newsletterForm = document.getElementById('newsletter-form');
+        const newsletterEmail = document.getElementById('newsletter-email');
+        const newsletterMessage = document.getElementById('newsletter-message');
+        const submitIcon = document.getElementById('submit-icon');
+        const submitBtn = document.getElementById('newsletter-submit-btn');
+
+        // Store original icon for restoration
+        const originalIconClass = 'ri-send-plane-line';
+
+        // Google Sheets script URL - Replace with your actual Google Apps Script URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzsDhh0plfBsWFsh3Pxst4FrlnS_4KkUmX4BsZl-nGbEyrJthJ60RUdrOHT_cuqH63n_w/exec';
+
+        // Validate email function - Same logic as index.html
+        const validateNewsletterEmail = (email) => {
+            if (!email) return 'Email is required';
+            if (email.length < NEWSLETTER_CONFIG.MIN_EMAIL_LENGTH) return 'Email is too short';
+            if (email.length > NEWSLETTER_CONFIG.MAX_EMAIL_LENGTH) return 'Email is too long';
+            if (!NEWSLETTER_CONFIG.EMAIL_REGEX.test(email)) return 'Please enter a valid email address';
+            return '';
+        };
+
+        // Show newsletter message function - Enhanced from index.html logic
+        const showNewsletterMessage = (msg, type) => {
+            newsletterMessage.textContent = msg;
+            newsletterMessage.className = 'newsletter__message';
+            
+            if (type === 'success') {
+                newsletterMessage.classList.add('success');
+            } else {
+                newsletterMessage.classList.add('error');
+            }
+            
+            // Clear success messages after duration
+            if (type === 'success') {
+                setTimeout(() => {
+                    if (newsletterMessage.textContent === msg) {
+                        newsletterMessage.textContent = '';
+                        newsletterMessage.className = 'newsletter__message';
+                    }
+                }, NEWSLETTER_CONFIG.SUCCESS_MESSAGE_DURATION);
+            }
+        };
+
+        // Handle form submission - Exact logic from index.html
+        const handleNewsletterSubmit = async (e) => {
+            e.preventDefault();
+            
+            // Check cooldown period using localStorage
+            const lastSubmission = localStorage.getItem('lastNewsletterSubmission');
+            if (lastSubmission && Date.now() - lastSubmission < NEWSLETTER_CONFIG.COOLDOWN_PERIOD) {
+                showNewsletterMessage('Please wait before subscribing again', 'error');
+                return;
+            }
+            
+            // Validate email
+            const email = newsletterEmail.value.trim();
+            const validationError = validateNewsletterEmail(email);
+            
+            if (validationError) {
+                showNewsletterMessage(validationError, 'error');
+                return;
+            }
+            
+            // Check honeypot field for bot protection
+            const honeypot = newsletterForm.querySelector('input[name="honeypot"]').value;
+            if (honeypot) {
+                console.log('Bot detected via honeypot');
+                showNewsletterMessage('Subscription failed. Please try again.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            submitIcon.className = 'ri-loader-4-line animate-spin';
+            submitBtn.disabled = true;
+            
+            try {
+                // Send data to Google Sheets
+                const response = await fetch(scriptURL, { 
+                    method: 'POST', 
+                    body: new FormData(newsletterForm)
+                });
+                
+                if (!response.ok) throw new Error('Subscription failed');
+                
+                // Clear form on success
+                newsletterForm.reset();
+                
+                // Show success message
+                showNewsletterMessage('Thank you for subscribing!', 'success');
+                
+                // Store submission time in localStorage
+                localStorage.setItem('lastNewsletterSubmission', Date.now());
+                
+            } catch (error) {
+                console.error('Subscription error:', error);
+                showNewsletterMessage('Subscription failed. Please try again later.', 'error');
+            } finally {
+                // Reset button state to original
+                submitIcon.className = originalIconClass;
+                submitBtn.disabled = false;
+            }
+        };
+
+        // Navigation toggle functionality
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navClose = document.getElementById('nav-close');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.add('show-menu');
+            });
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu');
+            });
+        }
+
+        // Close menu when clicking on nav links
+        document.querySelectorAll('.nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show-menu');
+            });
+        });
+
+        // Initialize newsletter form when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', handleNewsletterSubmit);
+                
+                // Clear error messages when user starts typing
+                if (newsletterEmail) {
+                    newsletterEmail.addEventListener('input', () => {
+                        if (newsletterMessage.textContent && newsletterMessage.classList.contains('error')) {
+                            newsletterMessage.textContent = '';
+                            newsletterMessage.className = 'newsletter__message';
+                        }
+                    });
+                }
+            }
+        });
+      </script>
+
+
+</body>
+</html>
