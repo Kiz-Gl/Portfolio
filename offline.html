@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - No Internet Connection</title>
+    <!-- Security Headers -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ====== Remixicons ====== -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <!-- ====== Css ====== -->
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/skins/color-1.css"/>
+
+    <!-- ====== Skin Colors ====== -->
+    <link rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+</head>
+<body class="offline-page">
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+     </header>
+
+     <!-- ====== Offline Content ====== -->
+     <main class="offline-container">
+        <section class="container">
+            <div class="offline-content">
+                <div class="offline-icon">
+                    <i class="ri-wifi-off-line"></i>
+                </div>
+                <h1 class="section__title offline-title">You're Offline</h1>
+                <p class="text-lg offline-description">
+                    It looks like you've lost your internet connection. Some features may be unavailable until you're back online.
+                </p>
+                <p class="text-lg offline-info">
+                    Don't worry! You can still access previously visited pages that have been cached.
+                </p>
+                <div class="offline-actions">
+                    <button onclick="window.location.reload()" class="button button--flex">
+                        <i class=""></i> Try Again
+                    </button>
+                    <a href="index.html" class="button button--flex button--secondary">
+                        <i class=""></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </section>
+     </main>
+
+      <!-- ====== Style Switcher ====== -->
+      <div class="style__switcher">
+        <div class="style__switcher-toggler" id="style-switcher-toggler">
+            <i class="ri-settings-4-fill"></i>
+        </div>
+        
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+       </div>
+     </div>
+     
+     <!-- ====== Footer ====== -->
+     <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__grid">
+                    </div>
+                </div>
+                <!-- Copyright notice -->
+                <p class="footer__copy">&copy; <span id="current-year">2025</span> Nicholus Muthomi. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+     <script>
+        // Initialize style switcher toggler
+        document.addEventListener('DOMContentLoaded', function() {
+            const styleSwitcher = document.querySelector('.style__switcher');
+            const styleSwitcherToggler = document.getElementById('style-switcher-toggler');
+            
+            if (styleSwitcherToggler) {
+                styleSwitcherToggler.addEventListener('click', () => {
+                    styleSwitcher.classList.toggle('open');
+                });
+            }
+            
+            // Close style switcher when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.style__switcher') && !e.target.closest('#style-switcher-toggler')) {
+                    if (styleSwitcher.classList.contains('open')) {
+                        styleSwitcher.classList.remove('open');
+                    }
+                }
+            });
+
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+     </script>
+
+      <!-- ====== Js ====== -->
+      <script src="assets/js/sri-validator.js"></script>
+      <script src="assets/js/security.js"></script>
+      <script src="assets/js/config.js"></script>
+      <script src="assets/js/common.js"></script>
+      <script src="assets/js/sw-register.js"></script>
+</body>
+</html>

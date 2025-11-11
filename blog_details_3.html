@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page 3</title>
+    <!-- Security Headers -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ====== Remixicons ====== -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <!-- ====== Css ====== -->
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/skins/color-1.css"/>
+
+    <!-- ====== Skin Colors ====== -->
+    <link rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+</head>
+<body>
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+     </header>
+
+     <!-- ====== Blog Details ====== -->
+      <div class="blog__header"></div>
+
+      <section class="container">
+        <div class="blog__details">
+            <a href="index.html#blog" class="back__to-home text-xs">
+                <i class="ri-arrow-left-line"></i> Back
+            </a>
+            <h3 class="post__details-title text-lg">Why good data doesn’t guarantee good decisions</h3>
+            <p class="post__details-date text-sm">October 30, 2025</p>
+            <p class="post__details text-sm">It’s easy to assume that more data or cleaner dashboards will automatically lead to better decisions. But after working in product analytics at MAANG and top fintech companies, I’ve learned the hard way: the link between data and decision-making isn’t automatic. It’s something you have to design for.</p>
+
+            <p class="post__details text-sm">Even in data-rich environments, I’ve seen brilliant teams make poor calls not because the data was wrong, but because the interpretation lacked context, the tools weren’t actionable, or the judgment wasn’t aligned. If you’re a product analyst or data professional, this is the real challenge: not generating insight, but helping others act on it.</p>
+
+            <figure>
+                <img src="assets/img/blog-3.jpg" alt="SVG Sprites vs Icon Font Blog Image">
+                <figcaption class="text-sm">
+                     Credit to international Network's Media for this Image
+                </figcaption>
+            </figure>
+
+            <h4 class="post__details-sub-title text-lg">Forecasting is only as good as its framing</h4>
+            <p class="post__details text-sm">Predictive analytics is a powerful tool but only if it’s focused on the right questions.</p>
+
+            <p class="post__details text-sm">When I was at a remittance fintech, our team built forecasting models to predict cross-border currency transfer volumes. We used transaction history, seasonality, marketing campaigns, and even currency volatility to improve accuracy. The math worked. But what mattered more was how those forecasts were used.</p>
+
+            <p class="post__details text-sm">Instead of treating the forecast as a static report, we embedded it into planning conversations like whether to ramp up hiring in customer support or adjust our marketing spend in a specific region. We also included clear confidence ranges so stakeholders could understand the level of uncertainty.</p>
+
+            <p class="post__details text-sm">Takeaway: A great model isn’t the goal a better business decision is. Predictive analytics needs to be built with decisions, not dashboards, in mind.</p>
+
+            <h4 class="post__details-sub-title text-lg">Context is the missing layer in most dashboards</h4>
+            <p class="post__details text-sm">I’ve lost count of how many dashboards I’ve seen that are visually polished but practically useless.</p>
+
+            <p class="post__details text-sm">At a MAANG company, one dashboard flagged a sharp drop in a key funnel metric. Panic followed. But after investigating, we realized it coincided with an A/B test introducing a new sign-up flow. The test wasn’t failing the dashboard just didn’t account for experimental context. That’s not a data problem. It’s a design problem.</p>
+
+            <p class="post__details text-sm">Too many dashboards are optimized for access, not understanding.</p>
+
+            <p class="post__details text-sm">Practical ways to make dashboards decision-ready:</p>
+            <ul class="numbered-list text-sm">
+                <li>Lead with questions, not metrics. What decision is this helping someone make?</li>
+                <li>Explain the "why" behind the numbers. Add annotations or context, not just charts.</li>
+                <li>Design for your audience. Product managers don't need to see raw SQL outputs they need business impact and recommended actions.</li>
+                <li>Use alerts sparingly, but smartly. Alert fatigue is real. But proactive nudges (e.g. "Customer churn has spiked post-release") help guide action.</li>
+            </ul>
+
+            <p class="post__details text-sm">Takeaway: Internal tools should act like a trusted colleague flagging issues, suggesting next steps, and filtering out noise.</p>
+
+            <h4 class="post__details-sub-title text-lg">Data alone isn't objective Interpretation matters</h4>
+            <p class="post__details text-sm">Many teams treat data like an absolute source of truth. But all data is shaped by choices what we measure, what we ignore, and how we define success.</p>
+
+            <p class="post__details text-sm">For example, at the remittance fintech company, we once celebrated a spike in feature adoption. But when we broke down the data by user segment, we saw that the increase came mostly from users who had churned shortly after. The metric looked good until we added nuance.</p>
+
+            <p class="post__details text-sm">We didn't have a data problem. We had a framing problem.</p>
+
+            <p class="post__details text-sm">As analysts, it's our job to ask: What does this metric really mean? What's missing from the picture?</p>
+
+            <p class="post__details text-sm">Three questions every analyst should regularly ask:</p>
+            <ul class="numbered-list text-sm">
+                <li>Who might interpret this differently and why?</li>
+                <li>What edge cases or outliers are we ignoring?</li>
+                <li>If this chart disappeared tomorrow, what decisions would actually change?</li>
+            </ul>
+
+            <p class="post__details text-sm">Takeaway: Data doesn't replace judgment it sharpens it. Analysts need to facilitate better conversations, not just generate charts.</p>
+
+            <h4 class="post__details-sub-title text-lg">Final thoughts: Be a strategic enabler, not just a data provider</h4>
+            <p class="post__details text-sm">The most impactful analysts I've worked with and tried to emulate aren't just technically excellent. They're clear thinkers. They anticipate business needs. And they design their work with decisions in mind.</p>
+
+            <p class="post__details text-sm">Whether you're building a dashboard, forecasting next quarter's sales, or interpreting a spike in churn, ask yourself:</p>
+            <ul class="numbered-list text-sm">
+                <li>Is this helping someone take action?</li>
+                <li>Am I providing context, not just numbers?</li>
+                <li>Have I made this easy to understand and even easier to trust?</li>
+            </ul>
+
+            <p class="post__details text-sm">If not, it's time to zoom out.</p>
+
+            <p class="post__details text-sm">Data is the input. Decision quality is the outcome. Everything in between is where analysts can make the biggest impact.</p>
+
+            <div class="post-share-container">
+                <div class="share-button">
+                    <span><i class="ri-share-line"></i> Share</span>
+                    <div class="share-options">
+                        <a href="#" aria-label="Share on Facebook" class="facebook" onclick="shareOnFacebook()"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Share on Twitter" class="twitter" onclick="shareOnTwitter()"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="Share on LinkedIn" class="linkedin" onclick="shareOnLinkedIn()"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- ====== Newsletter Subscription ====== -->
+        <!-- <section class="newsletter section container">
+            <h2 class="section__title">Subscribe to Newsletter_</h2>
+            
+            <div class="newsletter__container">
+                <p class="newsletter__description text-lg">
+                Stay updated with my latest blog posts and projects. Subscribe to my newsletter.
+                </p>
+                
+                <form id="newsletter-form" class="newsletter__form" name="submit-to-google-sheet">
+                    <div class="newsletter__input-group">
+                        <input 
+                        type="email" 
+                        name="Email" 
+                        placeholder="Your email address" 
+                        class="newsletter__input" 
+                        id="newsletter-email"
+                        required
+                        aria-label="Email address for newsletter subscription"
+                        >
+                        <button type="submit" class="newsletter__button" id="newsletter-submit-btn">
+                        <i class="ri-send-plane-line" id="submit-icon"></i> SUBSCRIBE
+                        </button>
+                    </div>
+                    <div class="newsletter__message" id="newsletter-message" aria-live="polite"></div>
+                    <p class="newsletter__security-info text-xs">
+                        Your privacy is our priority. We respect your inbox and will only send meaningful updates.
+                    </p>
+                    
+                    <input type="text" name="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+                </form>
+            </div>
+        </section> -->
+
+      <!-- ====== Contacts ====== -->
+      <section class="contact section" id="contact">
+        <div class="contact__content container">
+            <h2 class="section__title">Get in touch_</h2>
+            
+            <div class="contact__container grid">
+                <div class="contact__info">
+                    <dl class="contact__list">
+                        <dt>Phone:</dt>
+                        <dd>+254 770 600886</dd>
+                        <dt>Email:</dt>
+                        <dd>muthominicholus22@gmail.com</dd>
+                        <dt class="book-label">Book:</dt>
+                        <dd class="book-value">
+                            <a href="https://calendly.com/muthominicholus" 
+                            class="button button--flex button--calendly" 
+                            target="_blank"
+                            onclick="if(typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/muthominicholus'}); return false; }">
+                            <span class="button-text">Schedule Meeting</span>
+                            </a>
+                        </dd>
+                        </dl>
+
+                    <ul class="contact__socials">
+                        <li>
+                            <a href="https://wa.me/+254770600886" class="contact__social-link">Whatsapp</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/nicholus-muthomi/in/nicholus-muthomi/" class="contact__social-link">Linkedin</a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/NicholusMuthomi/" class="contact__social-link">Github</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact__form">
+                    <p class="contact__form-title">Or just write me a letter here_</p>
+                    <p class="contact__security-info">All messages are encrypted in transit_</p>
+
+                    <form action="" id="contact-form">
+                        <div class="contact__input-div">
+                            <input type="text" name="from_name" placeholder="Your name" class="contact__input" id="contact-name" required minlength="2" maxlength="50">
+                        </div>
+
+                        <div class="contact__input-div">
+                            <input type="email" name="reply_to" placeholder="Your e-mail" class="contact__input" id="contact-email" required>
+                        </div>
+
+                        <div class="contact__input-div">
+                            <textarea name="message" placeholder="Type the message here" class="contact__input textarea" id="message" cols="30" rows="10" required minlength="10" maxlength="3000"></textarea>
+                        </div>
+
+                        <p class="contact__message text-sm" id="contact-message">Message</p>
+
+                        <button type="submit" class="button contact__button">SEND</button>
+                    </form>
+
+                    <p class="footer__copy">&copy; 2025 Nicholus Muthomi. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      <!-- ====== Style Switcher ====== -->
+      <div class="style__switcher">
+        <div class="style__switcher-toggler">
+            <i class="ri-settings-4-fill"></i>
+        </div>
+        
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+       </div>
+     </div>
+
+      <!-- ====== Email Js ====== -->
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <!-- ====== Js ====== -->
+      <script src="assets/js/sri-validator.js"></script>
+      <script src="assets/js/security.js"></script>
+      <script src="assets/js/config.js"></script>
+      <script src="assets/js/common.js"></script>
+      <script src="assets/js/sw-register.js"></script>
+        <!-- <script>
+            // Newsletter Configuration - Exact logic from bl3.html
+            const NEWSLETTER_CONFIG = {
+                MIN_EMAIL_LENGTH: 5,
+                MAX_EMAIL_LENGTH: 100,
+                EMAIL_REGEX: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                COOLDOWN_PERIOD: 30000, // 30 seconds
+                SUCCESS_MESSAGE_DURATION: 5000 // 5 seconds
+            };
+
+            // DOM Elements
+            const newsletterForm = document.getElementById('newsletter-form');
+            const newsletterEmail = document.getElementById('newsletter-email');
+            const newsletterMessage = document.getElementById('newsletter-message');
+            const submitIcon = document.getElementById('submit-icon');
+            const submitBtn = document.getElementById('newsletter-submit-btn');
+
+            // Store original icon for restoration
+            const originalIconClass = 'ri-send-plane-line';
+
+            // Google Sheets script URL
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxMxUk90MQd8B6we6otKlq-u2Oza4TyyncIu3AwM9FP7fVac0H_7stME7kKXSpdqBQG/exec';
+
+            // Validate email function
+            const validateNewsletterEmail = (email) => {
+                if (!email) return 'Email is required';
+                if (email.length < NEWSLETTER_CONFIG.MIN_EMAIL_LENGTH) return 'Email is too short';
+                if (email.length > NEWSLETTER_CONFIG.MAX_EMAIL_LENGTH) return 'Email is too long';
+                if (!NEWSLETTER_CONFIG.EMAIL_REGEX.test(email)) return 'Please enter a valid email address';
+                return '';
+            };
+
+            // Show newsletter message function
+            const showNewsletterMessage = (msg, type) => {
+                newsletterMessage.textContent = msg;
+                newsletterMessage.className = 'newsletter__message';
+                
+                if (type === 'success') {
+                    newsletterMessage.classList.add('success');
+                } else {
+                    newsletterMessage.classList.add('error');
+                }
+                
+                // Clear success messages after duration
+                if (type === 'success') {
+                    setTimeout(() => {
+                        if (newsletterMessage.textContent === msg) {
+                            newsletterMessage.textContent = '';
+                            newsletterMessage.className = 'newsletter__message';
+                        }
+                    }, NEWSLETTER_CONFIG.SUCCESS_MESSAGE_DURATION);
+                }
+            };
+
+            // Handle form submission
+            const handleNewsletterSubmit = async (e) => {
+                e.preventDefault();
+                
+                // Check cooldown period using localStorage
+                const lastSubmission = localStorage.getItem('lastNewsletterSubmission');
+                if (lastSubmission && Date.now() - lastSubmission < NEWSLETTER_CONFIG.COOLDOWN_PERIOD) {
+                    showNewsletterMessage('Please wait before subscribing again', 'error');
+                    return;
+                }
+                
+                // Validate email
+                const email = newsletterEmail.value.trim();
+                const validationError = validateNewsletterEmail(email);
+                
+                if (validationError) {
+                    showNewsletterMessage(validationError, 'error');
+                    return;
+                }
+                
+                // Check honeypot field for bot protection
+                const honeypot = newsletterForm.querySelector('input[name="honeypot"]').value;
+                if (honeypot) {
+                    console.log('Bot detected via honeypot');
+                    showNewsletterMessage('Subscription failed. Please try again.', 'error');
+                    return;
+                }
+                
+                // Show loading state
+                submitIcon.className = 'ri-loader-4-line animate-spin';
+                submitBtn.disabled = true;
+                
+                try {
+                    // Send data to Google Sheets
+                    const response = await fetch(scriptURL, { 
+                        method: 'POST', 
+                        body: new FormData(newsletterForm)
+                    });
+                    
+                    if (!response.ok) throw new Error('Subscription failed');
+                    
+                    // Clear form on success
+                    newsletterForm.reset();
+                    
+                    // Show success message
+                    showNewsletterMessage('Thank you for subscribing!', 'success');
+                    
+                    // Store submission time in localStorage
+                    localStorage.setItem('lastNewsletterSubmission', Date.now());
+                    
+                } catch (error) {
+                    console.error('Subscription error:', error);
+                    showNewsletterMessage('Subscription failed. Please try again later.', 'error');
+                } finally {
+                    // Reset button state to original
+                    submitIcon.className = originalIconClass;
+                    submitBtn.disabled = false;
+                }
+            };
+
+            // Initialize newsletter form when DOM is loaded
+            document.addEventListener('DOMContentLoaded', () => {
+                if (newsletterForm) {
+                    newsletterForm.addEventListener('submit', handleNewsletterSubmit);
+                    
+                    // Clear error messages when user starts typing
+                    if (newsletterEmail) {
+                        newsletterEmail.addEventListener('input', () => {
+                            if (newsletterMessage.textContent && newsletterMessage.classList.contains('error')) {
+                                newsletterMessage.textContent = '';
+                                newsletterMessage.className = 'newsletter__message';
+                            }
+                        });
+                    }
+                }
+            });
+        </script> -->
+</body>
+
+</html>
+
+

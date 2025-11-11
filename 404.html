@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Nicholus Muthomi</title>
+    <!-- Security Headers -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ====== Remixicons ====== -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <!-- ====== Css ====== -->
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/skins/color-1.css"/>
+
+    <!-- ====== Skin Colors ====== -->
+    <link rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body class="error-page">
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+     </header>
+
+     <!-- ====== 404 Content ====== -->
+     <main class="error-container">
+        <section class="container">
+            <div class="error-content">
+                <div class="error-code">
+                    <span>4</span>
+                    <div class="error-icon">
+                        <i class="ri-emotion-sad-line"></i>
+                    </div>
+                    <span>4</span>
+                </div>
+                <h1 class="section__title error-title">Page Not Found</h1>
+                <p class="text-lg error-description">
+                    The page you're looking for might have been removed, had its name changed, or is temporarily unavailable.
+                </p>
+                <div class="error-actions">
+                    <a href="index.html" class="button button--flex">
+                        <i class="ri-arrow-left-line"></i> Back to Home
+                    </a>
+                    <a href="index.html#contact" class="button button--flex button--secondary">
+                        <i class="ri-customer-service-line"></i> Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+     </main>
+
+      <!-- ====== Style Switcher ====== -->
+      <div class="style__switcher">
+        <div class="style__switcher-toggler" id="style-switcher-toggler">
+            <i class="ri-settings-4-fill"></i>
+        </div>
+        
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+       </div>
+     </div>
+     
+     <!-- ====== Js ====== -->
+     <script src="assets/js/sri-validator.js"></script>
+     <script src="assets/js/security.js"></script>
+     <script src="assets/js/config.js"></script>
+     <script src="assets/js/common.js"></script>
+     <script src="assets/js/sw-register.js"></script>
+     
+     <script>
+        // Initialize style switcher toggler
+        document.addEventListener('DOMContentLoaded', function() {
+            const styleSwitcher = document.querySelector('.style__switcher');
+            const styleSwitcherToggler = document.getElementById('style-switcher-toggler');
+            
+            if (styleSwitcherToggler) {
+                styleSwitcherToggler.addEventListener('click', () => {
+                    styleSwitcher.classList.toggle('open');
+                });
+            }
+            
+            // Close style switcher when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.style__switcher') && !e.target.closest('#style-switcher-toggler')) {
+                    if (styleSwitcher.classList.contains('open')) {
+                        styleSwitcher.classList.remove('open');
+                    }
+                }
+            });
+            
+            // Add animation class to error icon
+            const errorIcon = document.querySelector('.error-icon');
+            if (errorIcon) {
+                setTimeout(() => {
+                    errorIcon.classList.add('animate');
+                }, 500);
+            }
+        });
+     </script>
+
+      <!-- ====== Footer ====== -->
+      <footer class="footer">
+          <div class="container">
+              <div class="footer__content">
+                  <div class="footer__grid">
+                      <!-- Navigation Links -->
+                      <div class="footer__nav">
+                          <ul class="footer__list">
+                              <li><a href="index.html" class="footer__link">Home</a></li>
+                              <li><a href="index.html#services" class="footer__link">Services</a></li>
+                              <li><a href="index.html#portfolio" class="footer__link">Work</a></li>
+                              <li><a href="index.html#contact" class="footer__link">Contact</a></li>
+                          </ul>
+                      </div>
+                      
+                      <!-- Social Media Links -->
+                      <div class="footer__socials">
+                          <ul class="footer__social-list">
+                              <li>
+                                  <a href="https://wa.me/+254770600886" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+                                      <i class="ri-whatsapp-fill"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="https://linkedin.com/in/yourprofile" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+                                      <i class="ri-linkedin-fill"></i>
+                                  </a>
+                              </li>
+                              <li>
+                                  <a href="https://github.com/NicholusMuthomi/" class="footer__social-link" target="_blank" rel="noopener noreferrer">
+                                      <i class="ri-github-fill"></i>
+                                  </a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  
+                  <!-- Copyright notice -->
+                  <p class="footer__copy">&copy; <span id="current-year">2025</span> Nicholus Muthomi. All Rights Reserved</p>
+              </div>
+          </div>
+      </footer>
+</body>
+</html>

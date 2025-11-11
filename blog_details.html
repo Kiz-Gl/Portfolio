@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    <!-- Security Headers -->
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- ====== Remixicons ====== -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <!-- ====== Css ====== -->
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+    <link rel="stylesheet" href="assets/css/skins/color-1.css"/>
+
+    <!-- ====== Skin Colors ====== -->
+    <link rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+</head>
+<body>
+    <!-- ====== Header ====== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>
+                        <a href="index.html" class="nav__link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-fill"></i>
+            </div>
+        </nav>
+     </header>
+
+     <!-- ====== Blog Details ====== -->
+      <div class="blog__header"></div>
+
+      <section class="container">
+        <div class="blog__details">
+            <a href="index.html#blog" class="back__to-home text-xs">
+                <i class="ri-arrow-left-line"></i> Back
+            </a>
+            <h3 class="post__details-title text-lg">Data quality for unbiased results: Preventing AI-induced hallucinations</h3>
+            <p class="post__details-date text-sm">October 30, 2025</p>
+
+            <p class="post__details text-sm">Artificial Intelligence (AI) has revolutionized and will continue to transform many customer-facing industries. AI-powered business applications offer tangible value to customers and business operations alike. However, there are substantial risks to AI adoption. Large Language Models (LLMs) built on partly biased data or modeling have shown how hallucinations can lead to negative business outcomes (A. Pequeno, Feb. 2024).</p>
+            
+            <figure>
+                <img src="assets/img/blog-1.jpg" alt="CSS Preprocessor Blog Image">
+                <figcaption class="text-sm">
+                    Credit to EdW EducationWeek for this Image
+                </figcaption>
+            </figure>
+
+            <p class="post__details text-sm">Effective AI outcomes require rich, accurate and unbiased data. Biased, incomplete, unlabeled and inaccurate training or business data will often generate AI-induced "hallucinations." Factual inconsistencies or subtly biased outcomes that may appear accurate and useful, but in reality, can negatively affect business decision making. Even clean business data contributes to hallucinations if upstream training data is biased or incomplete, or if AI results supervision is unable to access high-quality reference data and related knowledge. Because of this, it is not surprising that organizations seeking to tap into AI consider data challenges a primary obstacle as they work to train, deploy, scale and determine the return on investment of their AI initiatives. This points to the increasing need for tools and methods to confirm the trustworthiness of AI results.</p>
+
+            <p class="post__details text-sm">Moving through fundamental steps in a real-world medical data example will outline data quality practices needed to ensure accurate AI outcomes. Start by profiling, cleaning, and enriching the training and business data with automated rules and reasoning. Apply expert semantics and visually supported retrieval augmented generation in high data quality environments for informed and observable supervised QA and training (S. Hedden, Dec. 2024). Automate QC testing and correction of outcomes with curated content and expert-driven outcome augmentation supported by business rules and semantics.</p>
+
+            <p class="post__details text-sm">Preventing AI hallucinations from hampering business operations requires a comprehensive data quality approach, featuring "gold standard" training data; actively cleansed and augmented business data; and supervised AI training supported by observable content, machine reasoning and business rules. These factors must be complemented by automated testing and correction of outcomes supported by high-quality reference data, business rules, machine reasoning and RAG.</p>
+
+            <p class="post__details text-sm">Ensuring accuracy in AI applications can mean life or death to humans and businesses. Exploring a classic medical risk example will demonstrate the critical need for accurate AI output – supported by clean data, process and outcomes observability, and automated results supervision.</p>
+
+            <p class="post__details text-sm">In this scenario, a specific drug is prescribed as a patch, and the common dose is 15 milligrams. The drug is also available as a pill that requires a lower 5 milligram dose. An AI-enabled application may incorrectly generate a statement that combines the two pieces of information by stating a patient may take "a common 15mg dose, available in pill form." It's easy to miss the error, even for a human, but this makes for a potentially dangerous AI hallucination. A human medical expert paying close attention would likely recognize the error – taking 15 milligrams of the medication in pill form would be three times the recommended dose, potentially causing an overdose. A layperson naively asking an AI application about medical dosing might decide to take three 5 milligram pills – a potentially deadly outcome.</p>
+
+            <p class="post__details text-sm">Here, a patient's health and safety are at stake and deeply reliant on clean, well-labeled data and accurate AI outcomes. These errors can be avoided by combining high-quality training and reference data. Observable supervision and training of AI outcomes supported by semantic machine reasoning and business rules, and automated results checking that appeals to curated expert resources for results validation or correction, all contribute to a more functional AI system.</p>
+
+            <p class="post__details text-sm">In addition to incorporating traditional data quality operations that cleanse, integrate, harmonize and enrich data, semantically informed rules supported by good data can ensure accurate business data and AI output. Comparing output to expected results supports empirical accuracy. An expert ontology combined with curated medical reference data, such as the Unified Medical Language System (UMLS), can automatically determine medication dosage based on its prescribed use or format. The system recognizes and corrects the error independently, asserting that "for this medication, pills are not prescribed or recommended above 5 milligrams."</p>
+
+            <p class="post__details text-sm">How can we ensure clean, comprehensive training and business data and accurate outcomes from AI applications associated with medical data? It's critical to recommend the correct dose and route of administration for the proper medication.</p>
+
+            <p class="post__details text-sm">The following practices are developed around this potentially life-saving example. These processes can be implemented with low-code, no-code platforms that reduce the technical demands related to engineering critical data quality workflows.</p>
+
+            <p class="post__details text-sm">Start with cleansed and augmented training and data. To ensure high-quality training datasets, start by profiling, cleaning, and enriching training and business data as needed with automated rules and semantic inference. To avoid inaccurate AI outcomes (hallucinations), it is critical to use gold-standard reference datasets and clean, accurate business data. When training and business data are inaccurate, biased, or missing important metadata, AI applications will produce inaccurate or otherwise biased results.</p>
+
+            <p class="post__details text-sm">Every AI project should start with active and core data quality management, including profiling, deduplication, cleansing, classification and enrichment. Think of it as 'great data in – great business results out.' Ideally, training data is curated and integrated from multiple sources to create high-quality demographic, customer, firmographic, geographic, or other relevant data resources. Further, data quality and data-driven processes are not static and must be handled in real time. For this reason, active data quality (data quality automation) as a routine business operation is essential to any AI-enabled business application. This supports generating and applying active rules to address issues emerging from data profiling to cleanse, integrate, harmonize and enrich data referenced by your AI application. All these factors point to the need to develop AI-enabled applications within active data quality environments, as a means to fuel better business insights and hallucination-free outcomes.</p>
+
+            <p class="post__details text-sm">In the medications example, accurate, metadata-rich medication data is required and is referenced by the system. Clean reference data can be applied in multiple steps within an AI workflow:</p>
+
+            <ol class="numbered-list text-sm">
+                <li>First, upstream business data profiling, cleansing, and enrichment ensure the availability of accurate and consistent dosing and routing of administration information</li>
+                <li>Next, this data may be applied as a complement to observable supervised or unsupervised training, as the AI model is informed by prompt and result engineering. Missing or incorrect dose or route of administration content will be added or corrected.</li>
+                <li>Finally, AI outcomes can be informed and corrected by content retrieved from clean reference data in automated ways by applying retrieval augmented generation methods (RAG), or with observable supervision using knowledge graph-based GraphRAG methods.</li>
+            </ol>
+
+            <p class="post__details text-sm">These methods can identify and flag or correct any content or result that doesn't meet expected contents or relationships – a record or recommendation referencing a 15-milligram pill would be flagged or corrected.</p>
+
+            <p class="post__details text-sm">Train your AI application with observable, expert semantic supervision. Next, comparing outcomes with expected authoritative content and relationships (richly labeled reference and semantic data) is a critical workflow step. Observability and provenance are particularly important during the AI application development stage and remain critical for governance throughout the application lifespan.</p>
+
+            <p class="post__details text-sm">By combining high-quality training and reference datasets with semantically aligned ontological graphs, application engineers and data scientists can effectively review identified issues. Machine reasoning (or semantic inference) can apply semantic content and related data quality rules informed by experts, such as those provided by National Center for Biomedical Ontologies (NCBO) in the medications example. These resources can facilitate supervised learning, for instance, through visually supported retrieval augmented generation (GraphRAG).</p>
+
+            <p class="post__details text-sm">This creates an environment for informed and observable supervised training that supports the creation and application of existing or new business rules to ensure accurate outcomes. By training the AI application in real time, potential errors can be inferred, flagged, and corrected.</p>
+
+            <p class="post__details text-sm">Automate supervision, retrieval and augmentation/correction to advance AI at scale. Most of today's AI systems are developed with humans supervising the results. Business scale applications must automate the ability to check outputs and verify that they meet expected data quality and semantic meaning. For production, well-labeled reference data and authoritative semantic resources are deployed to automate the application of semantic entailments (data enrichment or correction grounded in ontological reasoning). Based on authoritative sources for retrieval of reference data and logic, rules and reasoning can be employed and applied at scale to augment, assess, and correct the generation of AI outcomes. While unknown issues may always be flagged for human supervision, most issues can be addressed in automated ways through the application of rules, expert ontologies, and high-quality data. Gold standard data referenced previously complements training and automated downstream supervision by comparing outcomes with expected reference data patterns.</p>
+
+            <p class="post__details text-sm">While medical diagnoses and prescriptions may always need human supervision, we can ensure accuracy with all our mission-critical AI applications by applying clean, well-labeled data and meaningful augmentation.</p>
+
+            <p class="post__details text-sm">Hallucination-proofing AI applications requires the use of tools and resources that support empirical accuracy. To avoid getting it wrong, anchor your AI projects in gold standard reference data for training, clean and curated business data, and active data quality processes with observable and semantically informed results supervision. Together, these methods provide a fundamentally required foundation for meaningful, observable, and automated creation, testing, and correction of AI outcomes.</p>
+
+            <div class="post-share-container">
+                <div class="share-button">
+                    <span><i class="ri-share-line"></i> Share</span>
+                    <div class="share-options">
+                        <a href="#" aria-label="Share on Facebook" class="facebook" onclick="shareOnFacebook()"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" aria-label="Share on Twitter" class="twitter" onclick="shareOnTwitter()"><i class="ri-twitter-x-fill"></i></a>
+                        <a href="#" aria-label="Share on LinkedIn" class="linkedin" onclick="shareOnLinkedIn()"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      </section>
+
+        <!-- ====== Newsletter Subscription ====== -->
+        <!-- <section class="newsletter section container">
+            <h2 class="section__title">Subscribe to Newsletter_</h2>
+            
+            <div class="newsletter__container">
+                <p class="newsletter__description text-lg">
+                Stay updated with my latest blog posts and projects. Subscribe to my newsletter.
+                </p>
+                
+                <form id="newsletter-form" class="newsletter__form" name="submit-to-google-sheet">
+                    <div class="newsletter__input-group">
+                        <input 
+                        type="email" 
+                        name="Email" 
+                        placeholder="Your email address" 
+                        class="newsletter__input" 
+                        id="newsletter-email"
+                        required
+                        aria-label="Email address for newsletter subscription"
+                        >
+                        <button type="submit" class="newsletter__button" id="newsletter-submit-btn">
+                        <i class="ri-send-plane-line" id="submit-icon"></i> SUBSCRIBE
+                        </button>
+                    </div>
+                    <div class="newsletter__message" id="newsletter-message" aria-live="polite"></div>
+                    <p class="newsletter__security-info text-xs">
+                        Your privacy is our priority. We respect your inbox and will only send meaningful updates.
+                    </p>
+                    <input type="text" name="honeypot" style="display: none;" tabindex="-1" autocomplete="off">
+                </form>
+            </div>
+        </section> -->
+
+      <!-- ====== Contacts ====== -->
+      <section class="contact section" id="contact">
+        <div class="contact__content container">
+            <h2 class="section__title">Get in touch_</h2>
+            
+            <div class="contact__container grid">
+                <div class="contact__info">
+                    <dl class="contact__list">
+                        <dt>Phone:</dt>
+                        <dd>+254 770 600886</dd>
+                        <dt>Email:</dt>
+                        <dd>muthominicholus22@gmail.com</dd>
+                        <dt class="book-label">Book:</dt>
+                        <dd class="book-value">
+                            <a href="https://calendly.com/muthominicholus" 
+                            class="button button--flex button--calendly" 
+                            target="_blank"
+                            onclick="if(typeof Calendly !== 'undefined') { Calendly.initPopupWidget({url: 'https://calendly.com/muthominicholus'}); return false; }">
+                            <span class="button-text">Schedule Meeting</span>
+                            </a>
+                        </dd>
+                    </dl>
+
+                    <ul class="contact__socials">
+                        <li>
+                            <a href="https://wa.me/+254770600886" class="contact__social-link">Whatsapp</a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.linkedin.com/in/nicholus-muthomi/in/nicholus-muthomi/" class="contact__social-link">Linkedin</a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/NicholusMuthomi/" class="contact__social-link">Github</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact__form">
+                    <p class="contact__form-title">Or just write me a letter here_</p>
+                    <p class="contact__security-info">All messages are encrypted in transit_</p>
+
+                    <form action="" id="contact-form">
+                        <div class="contact__input-div">
+                            <input type="text" name="from_name" placeholder="Your name" class="contact__input" id="contact-name" required minlength="2" maxlength="50">
+                        </div>
+
+                        <div class="contact__input-div">
+                            <input type="email" name="reply_to" placeholder="Your e-mail" class="contact__input" id="contact-email" required>
+                        </div>
+
+                        <div class="contact__input-div">
+                            <textarea name="message" placeholder="Type the messsage here" class="contact__input textarea" id="message" cols="30" rows="10" required minlength="10" maxlength="3000"></textarea>
+                        </div>
+
+                        <p class="contact__message text-sm" id="contact-message">Message</p>
+
+                        <button type="submit" class="button contact__button">SEND</button>
+                    </form>
+
+                    <p class="footer__copy">&copy; 2025 Nicholus Muthomi. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+      <!-- ====== Style Switcher ====== -->
+      <div class="style__switcher">
+        <div class="style__switcher-toggler">
+            <i class="ri-settings-4-fill"></i>
+        </div>
+        
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+       </div>
+     </div>
+
+
+      <!-- ====== Newsletter Google Sheets Integration Script ====== -->
+       <!-- <script>
+        // Newsletter Configuration
+        const NEWSLETTER_CONFIG = {
+            MIN_EMAIL_LENGTH: 5,
+            MAX_EMAIL_LENGTH: 100,
+            EMAIL_REGEX: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            COOLDOWN_PERIOD: 30000, // 30 seconds
+            SUCCESS_MESSAGE_DURATION: 5000, // 5 seconds
+            GOOGLE_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzsDhh0plfBsWFsh3Pxst4FrlnS_4KkUmX4BsZl-nGbEyrJthJ60RUdrOHT_cuqH63n_w/exec'
+        };
+
+        // DOM Elements
+        const newsletterForm = document.getElementById('newsletter-form');
+        const newsletterEmail = document.getElementById('newsletter-email');
+        const newsletterMessage = document.getElementById('newsletter-message');
+        const submitBtn = document.getElementById('newsletter-submit-btn');
+
+        // Validate email function
+        const validateNewsletterEmail = (email) => {
+            if (!email) return 'Email is required';
+            if (email.length < NEWSLETTER_CONFIG.MIN_EMAIL_LENGTH) return 'Email is too short';
+            if (email.length > NEWSLETTER_CONFIG.MAX_EMAIL_LENGTH) return 'Email is too long';
+            if (!NEWSLETTER_CONFIG.EMAIL_REGEX.test(email)) return 'Please enter a valid email address';
+            return '';
+        };
+
+        // Show newsletter message function
+        const showNewsletterMessage = (msg, type) => {
+            newsletterMessage.textContent = msg;
+            newsletterMessage.className = 'newsletter__message';
+            
+            if (type === 'success') {
+                newsletterMessage.classList.add('success');
+            } else {
+                newsletterMessage.classList.add('error');
+            }
+            
+            // Clear success messages after duration
+            if (type === 'success') {
+                setTimeout(() => {
+                    if (newsletterMessage.textContent === msg) {
+                        newsletterMessage.textContent = '';
+                        newsletterMessage.className = 'newsletter__message';
+                    }
+                }, NEWSLETTER_CONFIG.SUCCESS_MESSAGE_DURATION);
+            }
+        };
+
+        // Handle form submission with Google Script
+        const handleNewsletterSubmit = async (e) => {
+            e.preventDefault();
+            
+            // Check cooldown period using localStorage
+            const lastSubmission = localStorage.getItem('lastNewsletterSubmission');
+            if (lastSubmission && Date.now() - lastSubmission < NEWSLETTER_CONFIG.COOLDOWN_PERIOD) {
+                showNewsletterMessage('Please wait before subscribing again', 'error');
+                return;
+            }
+            
+            // Validate email
+            const email = newsletterEmail.value.trim();
+            const validationError = validateNewsletterEmail(email);
+            
+            if (validationError) {
+                showNewsletterMessage(validationError, 'error');
+                return;
+            }
+            
+            // Check honeypot field for bot protection
+            const honeypot = newsletterForm.querySelector('input[name="honeypot"]').value;
+            if (honeypot) {
+                console.log('Bot detected via honeypot');
+                showNewsletterMessage('Subscription failed. Please try again.', 'error');
+                return;
+            }
+            
+            // Show loading state
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="ri-loader-4-line animate-spin"></i> SENDING';
+            submitBtn.disabled = true;
+            
+            try {
+                // Create FormData for Google Script
+                const formData = new FormData();
+                formData.append('Email', email);
+                formData.append('timestamp', new Date().toISOString());
+                
+                // Submit to Google Script
+                const response = await fetch(NEWSLETTER_CONFIG.GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors' // Required for Google Apps Script
+                });
+                
+                // Since mode is 'no-cors', we can't read the response
+                // But if no error was thrown, we assume success
+                
+                // Clear form on success
+                newsletterForm.reset();
+                
+                // Show success message
+                showNewsletterMessage('Thank you for subscribing!', 'success');
+                
+                // Store submission time in localStorage
+                localStorage.setItem('lastNewsletterSubmission', Date.now());
+                
+            } catch (error) {
+                console.error('Subscription error:', error);
+                showNewsletterMessage('Subscription failed. Please try again later.', 'error');
+            } finally {
+                // Reset button state to original
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        };
+
+        // Initialize newsletter form when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', handleNewsletterSubmit);
+                
+                // Clear error messages when user starts typing
+                if (newsletterEmail) {
+                    newsletterEmail.addEventListener('input', () => {
+                        if (newsletterMessage.textContent && newsletterMessage.classList.contains('error')) {
+                            newsletterMessage.textContent = '';
+                            newsletterMessage.className = 'newsletter__message';
+                        }
+                    });
+                }
+            }
+        });
+        
+       </script> -->
+
+      <!-- ====== Email Js ====== -->
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+      </script>
+      <!-- ====== Js ====== -->
+      <script src="assets/js/sri-validator.js"></script>
+      <script src="assets/js/security.js"></script>
+      <script src="assets/js/config.js"></script>
+      <script src="assets/js/common.js"></script>
+      <script src="assets/js/sw-register.js"></script>
+</body>
+
+</html>
+
+
