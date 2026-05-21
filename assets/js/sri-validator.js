@@ -19,19 +19,19 @@
 const integrityMap = {
   // RemixIcon CSS v4.5.0
   'https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css':
-    'sha384-vVL29jZ4hHJjCLzTkRLHXWJLFVLzBZBuOJTMNBpIMm3bMFqH3RKSUE6JNJkF3/v',
+    'sha384-L/vw44MdBs/7hovWr2rBVSRKqdti4Vw077yuSGQ2PO3tQARRLiLuMh8xhVmVrR0I',
 
   // Swiper CSS v11
   'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css':
-    'sha384-MtC2f1lFiTUnLg3E89SHu0sWpVzEGJfU3kLdTzGgpUFXnzGMnEXy6tMrUmYPKLk',
+    'sha384-gAPqlBuTCdtVcYt9ocMOYWrnBZ4XSL6q+4eXqwNycOr4iFczhNKtnYhF3NEXJM51',
 
   // Swiper JS v11
   'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js':
-    'sha384-1LHqCBG9537IfxMFKHHKqo1Lq31D9p9p7L0wFGRWOl3nSlXk8/3bJyTPc2B3V2i',
+    'sha384-2UI1PfnXFjVMQ7/ZDEF70CR943oH3v6uZrFQGGqJYlvhh4g6z6uVktxYbOlAczav',
 
   // EmailJS browser v4
   'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js':
-    'sha384-3MfpWMJLJTlNflX/JVEkQTxC/1Gh5xCXAOjlXDGo7DKAl3Hye8oFZnf0BEaFpbv'
+    'sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS'
 };
 
 /**
