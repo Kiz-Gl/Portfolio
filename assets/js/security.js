@@ -106,7 +106,7 @@ function initSecurity() {
   // Apply all security enhancements
   applyContentSecurityPolicy();
   addCSRFProtection();
-  // Secure external links (add this function to security.js)
+  // Secure external links
   function secureExternalLinks() {
     document.querySelectorAll('a[href^="http"]').forEach(link => {
       if (!link.href.includes(window.location.hostname)) {
@@ -114,22 +114,13 @@ function initSecurity() {
         link.setAttribute('rel', 'noopener noreferrer');
       }
     });
+  }
 
-    // Secure external links
-  function secureExternalLinks() {
-      document.querySelectorAll('a[href^="http"]').forEach(link => {
-          if (!link.href.includes(window.location.hostname)) {
-              link.setAttribute('target', '_blank');
-              link.setAttribute('rel', 'noopener noreferrer');
-          }
-      });
-  }
-  }
   preventClickjacking();
-  secureExternalLinks()
+  secureExternalLinks();
   sanitizeURLParams();
-  
-  // Periodically check for new external links
+
+  // Periodically check for new external links (e.g. dynamically added)
   setInterval(secureExternalLinks, 3000);
   
   console.log('Security measures initialized');
