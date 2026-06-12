@@ -115,7 +115,8 @@
       <!-- ====== Home ====== -->
       <section class="home" id="home">
         <div class="home__container container grid">
-          <img src="assets/img/profile.jpg" alt="" class="home__img" />
+          <!-- Profile photo loads eagerly (first visible image) -->
+          <img src="assets/img/profile.jpg" alt="Nicholus Muthomi" class="home__img" />
 
           <div class="home__data">
             <h1 class="home__name">Nicholus Muthomi_</h1>
@@ -184,6 +185,7 @@
                 src="assets/img/preprocessing.png"
                 alt=""
                 class="services__icon"
+                loading="lazy"
               />
               <div class="services__dot">
                 <span class="dot"></span>
@@ -197,7 +199,7 @@
 
           <div class="services__item">
             <div class="icon__box">
-              <img src="assets/img/dashboard.png" alt="" class="services__icon" />
+              <img src="assets/img/dashboard.png" alt="" class="services__icon" loading="lazy" />
               <div class="services__dot">
                 <span class="dot"></span>
               </div>
@@ -214,6 +216,7 @@
                 src="assets/img/deep-learning.png"
                 alt=""
                 class="services__icon"
+                loading="lazy"
               />
               <div class="services__dot">
                 <span class="dot"></span>
@@ -230,6 +233,7 @@
                 src="assets/img/feature.png"
                 alt=""
                 class="services__icon"
+                loading="lazy"
               />
               <div class="services__dot">
                 <span class="dot"></span>
@@ -247,6 +251,7 @@
                 src="assets/img/verified.png"
                 alt=""
                 class="services__icon"
+                loading="lazy"
               />
               <div class="services__dot">
                 <span class="dot"></span>
@@ -264,6 +269,7 @@
                 src="assets/img/operator.png"
                 alt=""
                 class="services__icon"
+                loading="lazy"
               />
               <div class="services__dot">
                 <span class="dot"></span>
@@ -284,22 +290,6 @@
         <div class="resume__container">
           <!-- Experience Column -->
           <div class="resume-column">
-            <!-- <div class="resume-item">
-              <div class="resume-icon experience-icon">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M20 6h-2V4c0-1.11-.89-2-2-2H8c-1.11 0-2 .89-2 2v2H4c-1.11 0-2 .89-2 2v11c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zM8 4h8v2H8V4zm12 15H4V8h16v11z"
-                  />
-                </svg>
-              </div>
-              <div class="resume-date text-sm">2023 - 2024</div>
-              <h3 class="resume-title text-sm">Data Entry</h3>
-              <p class="resume-company text-sm">Fauna & Flora Company Kenya</p>
-              <p class="resume__description text-lg">
-                Managed data collection on sustainable farming, conservation and farmer outreach, supporting energy-efficient stoves, demonstration projects and soil testing programs to guide crop and land-use decisions
-              </p>
-            </div> -->
-
             <div class="resume-item">
               <div class="resume-icon experience-icon">
                 <svg viewBox="0 0 24 24">
@@ -334,22 +324,6 @@
                Developed practical skills in statistical analysis, machine learning and data visualisation using Python, SQL, Excel and Power Bi that have enhanced my analytical and problem-solving abilities for practical projects.
               </p>
             </div>
-
-            <!-- <div class="resume-item">
-              <div class="resume-icon education-icon">
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"
-                  />
-                </svg>
-              </div>
-              <div class="resume-date text-sm">2018 - 2022</div>
-              <h3 class="resume-title text-sm">High School Diploma</h3>
-              <p class="resume-company text-sm">Ngarendare High School</p>
-              <p class="resume__description text-lg">
-                Completed a foundational academic program that improved analytical and problem-solving skills in language, math and science, and extracurricular activities to improve teamwork, collaboration and leadership abilities
-              </p>
-            </div> -->
           </div>
         </div>
       </section>
@@ -488,6 +462,7 @@
                     src="assets/img/project-14.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -501,6 +476,7 @@
                     src="assets/img/excel-logo.svg"
                     alt=""
                     class="portfolio-skill"
+                    loading="lazy"
                   />
                 </div>
 
@@ -519,6 +495,7 @@
                     src="assets/img/project-7.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -528,21 +505,9 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  <img
-                    src="assets/img/css-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  <img
-                    src="assets/img/html-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
+                  <img src="assets/img/css-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
+                  <img src="assets/img/html-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Stock-Market/blob/main/Stock_Market.ipynb" class="portfolio-link">
@@ -565,6 +530,7 @@
                     src="assets/img/project-8.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -574,11 +540,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/postgresql-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/postgresql-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Spotify-Dataset-Analysis/blob/main/spotify.sql" class="portfolio-link">
@@ -597,6 +559,7 @@
                     src="assets/img/project-3.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -606,11 +569,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/postgresql-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/postgresql-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/US-Retail-Store/blob/main/Retail%20Store%20Sales.sql" class="portfolio-link">
@@ -629,6 +588,7 @@
                     src="assets/img/project-2.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -638,11 +598,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/postgresql-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/postgresql-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Brazil-Olist-Analysis/blob/main/Brazillian%20Olist.sql" class="portfolio-link">
@@ -661,6 +617,7 @@
                     src="assets/img/project-18.avif"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -670,11 +627,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/E-commerce-Sales-Analysis/blob/main/E_commerce_Sales_Data_Analysis.ipynb" class="portfolio-link">
@@ -693,6 +646,7 @@
                     src="assets/img/project-4.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -702,11 +656,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Fifa-2022/blob/main/FIFA_22_Data_Analysis.ipynb" class="portfolio-link">
@@ -725,6 +675,7 @@
                     src="assets/img/project-17.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -734,11 +685,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/excel-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/excel-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://onedrive.live.com/edit?cid=c50ee1f2c1b144aa&id=C50EE1F2C1B144AA!se49bcc58712744f193b42048fd1d8702&resid=C50EE1F2C1B144AA!se49bcc58712744f193b42048fd1d8702&ithint=file%2Cxlsx&embed=1&em=2&wdAllowInteractivity=True&wdHideGridlines=True&wdHideHeaders=True&wdDownloadButton=True&wdInConfigurator=True%2CTrue&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3gvYy9jNTBlZTFmMmMxYjE0NGFhL0lRUll6SnZrSjNIeFJKTzBJRWo5SFljQ0FUYmhNdFg4LWY0b3BmR2VpV2lyczZRP2VtPTImd2RBbGxvd0ludGVyYWN0aXZpdHk9VHJ1ZSZ3ZEhpZGVHcmlkbGluZXM9VHJ1ZSZ3ZEhpZGVIZWFkZXJzPVRydWUmd2REb3dubG9hZEJ1dHRvbj1UcnVlJndkSW5Db25maWd1cmF0b3I9VHJ1ZSZ3ZEluQ29uZmlndXJhdG9yPVRydWU&wdo=2" class="demo-link">
@@ -756,6 +703,7 @@
                     src="assets/img/project-15.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -765,11 +713,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/excel-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/excel-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://bit.ly/41EIZk5" class="demo-link">
@@ -787,6 +731,7 @@
                     src="assets/img/project-6.jpg"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -796,22 +741,9 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  <img
-                    src="assets/img/css-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  <img
-                    src="assets/img/html-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
+                  <img src="assets/img/css-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
+                  <img src="assets/img/html-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Recommendation-System/blob/main/Movie_Recommendation_System.ipynb" class="portfolio-link">
@@ -834,6 +766,7 @@
                     src="assets/img/project-19.jpg"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -843,11 +776,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Hilton-Hotel-Review-Analysis" class="portfolio-link">
@@ -866,6 +795,7 @@
                     src="assets/img/project-12.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -875,11 +805,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Telco-Customer-Churn/blob/main/Telco_Customer_Churn_Prediction.ipynb" class="portfolio-link">
@@ -898,6 +824,7 @@
                     src="assets/img/project-9.jpg"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -907,22 +834,9 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  <img
-                    src="assets/img/css-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  <img
-                    src="assets/img/html-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                  
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
+                  <img src="assets/img/css-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
+                  <img src="assets/img/html-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Flight-Price-Prediction./blob/main/India_Flight_Prediction.ipynb" class="portfolio-link">
@@ -945,6 +859,7 @@
                     src="assets/img/project-16.png"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -954,11 +869,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/power-bi-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/power-bi-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://app.powerbi.com/view?r=eyJrIjoiMjY0ZGUyNjctMzk5Mi00YjYwLTlhYWMtM2JiMTI3YmYyNGYwIiwidCI6IjM1M2FhNTQxLTlkYmYtNDAyNi05M2I4LThjZWZjOTAyMGY4NiJ9" class="demo-link">
@@ -976,6 +887,7 @@
                     src="assets/img/project-10.jpg"
                     alt=""
                     class="portfolio-img"
+                    loading="lazy"
                   />
                 </a>
 
@@ -985,11 +897,7 @@
                 </p>
 
                 <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
+                  <img src="assets/img/python-logo.svg" alt="" class="portfolio-skill" loading="lazy" />
                 </div>
 
                 <a href="https://github.com/NicholusMuthomi/Online-Retailer-in-UK/blob/main/UK_Online_Retail_Data_Analysis.ipynb" class="portfolio-link">
@@ -1000,70 +908,6 @@
             </div>
           </div>
 
-          <!-- <div class="project__item app">
-            <div class="portfolio-container container grid">
-              <article class="portfolio-card">
-                <a class="portfolio-img-wrapper">
-                  <img
-                    src="assets/img/project-11.jpg"
-                    alt=""
-                    class="portfolio-img"
-                  />
-                </a>
-
-                <h3 class="portfolio-title text-sm">Wildlife</h3>
-                <p class="portfolio-description text-sm">
-                  Short description of the project that was carried out in this
-                  portfolio.
-                </p>
-
-                <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                </div>
-
-                <a href="#" class="portfolio-link">
-                  <i class="ri-link link-icon"></i>
-                  Coming Soon
-                </a>
-              </article>
-            </div>
-          </div> 
-
-          <div class="project__item app">
-            <div class="portfolio-container container grid">
-              <article class="portfolio-card">
-                <a class="portfolio-img-wrapper">
-                  <img
-                    src="assets/img/project-13.jpg"
-                    alt=""
-                    class="portfolio-img"
-                  />
-                </a>
-
-                <h3 class="portfolio-title text-sm">CapuchinBird Audio Classification</h3>
-                <p class="portfolio-description text-sm">
-                  Developing a CNN model to identify Capuchinbird calls in audio by utilising spectrograms. High accuracy against noise will be delivered enabling scalable biodiversity monitoring for conservation.
-                </p>
-
-                <div class="portfolio-skills">
-                  <img
-                    src="assets/img/python-logo.svg"
-                    alt=""
-                    class="portfolio-skill"
-                  />
-                </div>
-
-                <a href="#" class="portfolio-link">
-                  <i class="ri-link link-icon"></i>
-                  Coming Soon
-                </a>
-              </article>
-            </div>
-          </div> -->
         </div>
       </section>
 
@@ -1074,9 +918,7 @@
 
         categoryBtns.forEach((btn) => {
           btn.addEventListener("click", () => {
-            // Remove active class from all buttons
             categoryBtns.forEach((b) => b.classList.remove("active-work"));
-            // Add active class to clicked button
             btn.classList.add("active-work");
 
             const filter = btn.dataset.filter;
@@ -1106,7 +948,6 @@
           <div class="swiper testimonial__container container">
             <div class="swiper-wrapper">
               <div class="swiper-slide testimonial__item">
-                
                 <p class="author__project">
                   Project: Feild Data Researcher at MKEWP Company
                 </p>
@@ -1117,42 +958,13 @@
                   <h3 class="author__name tex-lg">HR ~ Dennis Kimathi</h3>
                 </div>
               </div>
-
-              <!-- <div class="swiper-slide testimonial__item">
-                <p class="author__project">
-                  Project: Data Entry at Fauna & Flora Co.
-                </p>
-                <div class="ruler">
-                  <p class="testimonial__description text-lg">
-                    "Excellent work, The fuel consumption data was critical to its success  and the community engagement was handled perfectly. The research was thorough and directly led to promoting sustainable practices."
-                  </p>
-                  <h3 class="author__name tex-lg">K.Kelvin</h3>
-                </div>
-              </div> -->
-
-              <!-- <div class="swiper-slide testimonial__item">
-                <h3 class="author__name tex-lg">Antonio Anderson</h3>
-                <p class="author__project">
-                  Project: Landin page for travel company
-                </p>
-                <div class="ruler">
-                  <p class="testimonial__description text-lg">
-                    Up or well must less rent read walk so be. Easy sold at do
-                    hour sing spot. Any meant has cease too the decay. Since
-                    party burst am it match. By or blushes between besides
-                    offices noisier as. Sending do brought winding compass in.
-                    Easy sold at do hour sing spot less rent read walk so be.
-                    Any meant has cease too the decay.
-                  </p>
-                </div>
-              </div> -->
             </div>
 
             <div class="swiper-button-next">
-              <img src="assets/img/arrow-next.svg" alt="" />
+              <img src="assets/img/arrow-next.svg" alt="" loading="lazy" />
             </div>
             <div class="swiper-button-prev">
-              <img src="assets/img/arrow-prev.svg" alt="" />
+              <img src="assets/img/arrow-prev.svg" alt="" loading="lazy" />
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -1165,7 +977,7 @@
 
         <div class="posts__container grid">
           <a href="blog_details.html" class="post__card">
-            <img src="assets/img/blog-1.jpg" alt="" class="post__img" />
+            <img src="assets/img/blog-1.jpg" alt="" class="post__img" loading="lazy" />
             <div class="post__content">
               <p class="post__date text-xs">January 15, 2026</p>
               <h3 class="post__title text-sm">DATA QUALITY FOR BIAS RESULTS: PREVENTING AI-INDUCED HALLUCINATIONS</h3>
@@ -1176,7 +988,7 @@
           </a>
 
           <a href="blog_details_2.html" class="post__card">
-            <img src="assets/img/blog-2.jpeg" alt="a" class="post__img" />
+            <img src="assets/img/blog-2.jpeg" alt="a" class="post__img" loading="lazy" />
             <div class="post__content">
               <p class="post__date text-xs">January 15, 2026</p>
               <h3 class="post__title text-sm">
@@ -1189,12 +1001,12 @@
           </a>
 
           <a href="blog_details_3.html" class="post__card">
-            <img src="assets/img/blog-3.jpg" alt="a" class="post__img" />
+            <img src="assets/img/blog-3.jpg" alt="a" class="post__img" loading="lazy" />
             <div class="post__content">
               <p class="post__date text-xs">January 15, 2026</p>
               <h3 class="post__title text-sm">WHY GOOD DATA DOES'T GUARANTEE GOOD DECISION</h3>
               <p class="post__description text-sm">
-                It’s easy to assume that more data or cleaner dashboards will...
+                It's easy to assume that more data or cleaner dashboards will...
               </p>
             </div>
           </a>
@@ -1278,6 +1090,7 @@
         <span class="color-1" onclick="setActiveStyle('color-1')"></span>
       </div>
     </div>
+
     <!-- ====== Mixitup ====== -->
     <script src="assets/js/mixitup.min.js"></script>
 
@@ -1304,13 +1117,12 @@
     <script src="assets/js/config.js"></script>
     <script src="assets/js/sw-register.js"></script>
 
-        <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZWFHEC7SD"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-    
       gtag('config', 'G-WZWFHEC7SD');
     </script>
 
