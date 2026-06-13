@@ -4,7 +4,6 @@ const navMenu = document.getElementById('nav-menu'),
       navClose = document.getElementById('nav-close');
 
 /*===== Menu Show =====*/
-/* Validate if constant exists */
 if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
@@ -12,7 +11,6 @@ if (navToggle) {
 }
 
 /*===== Hide Show =====*/
-/* Validate if constant exists */
 if (navClose) {
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu');
@@ -24,7 +22,6 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
     const navMenu = document.getElementById('nav-menu');
-    // when we click on each link, we remove the show-menu class
     navMenu.classList.remove('show-menu');
 }
 
@@ -33,7 +30,6 @@ navLink.forEach((n) => n.addEventListener('click', linkAction));
 /*=============== Background Header =============*/
 function scrollHeader() {
     const header = document.getElementById('header');
-    // when the scroll is greater than 50 viewport height, add the scroll-header class to header tag
     if (this.scrollY >= 50) header.classList.add('scroll-header');
     else header.classList.remove('scroll-header');
 }
@@ -56,7 +52,7 @@ const SECURITY = {
   EMAIL_REGEX: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   NAME_REGEX: /^[a-zA-Z\s\-']+$/,
   SPAM_KEYWORDS: ['http://', 'https://', 'www.', '.com', 'href=', 'url=', '[link]'],
-  TIME_LIMIT: 5000 // 5 seconds minimum form fill time
+  TIME_LIMIT: 5000
 };
 
 let formSubmitTime = 0;
@@ -90,7 +86,6 @@ const validateMessage = (msg) => {
   if (msg.length < SECURITY.MIN_MESSAGE_LENGTH) return `Message must be at least ${SECURITY.MIN_MESSAGE_LENGTH} characters`;
   if (msg.length > SECURITY.MAX_MESSAGE_LENGTH) return `Message must be less than ${SECURITY.MAX_MESSAGE_LENGTH} characters`;
   
-  // Check for spam keywords
   const lowerMsg = msg.toLowerCase();
   if (SECURITY.SPAM_KEYWORDS.some(keyword => lowerMsg.includes(keyword))) {
     return 'Message contains suspicious content';
@@ -101,23 +96,12 @@ const validateMessage = (msg) => {
 // Form submission handler
 const sendEmail = async (e) => {
   e.preventDefault();
-  
-  // Set form submission time if not set
+
+  // Check minimum time requirement (anti-bot measure)
   if (!formSubmitTime) {
-    formSubmitTime = Date.now();
     return showMessage('Please fill out the form completely', 'error');
   }
-  
-  // Verify CSRF token
-  const formToken = contactForm.querySelector('input[name="csrf_token"]')?.value;
-  const storedToken = localStorage.getItem('csrf_token');
-  
-  if (!formToken || formToken !== storedToken) {
-    console.error('CSRF token validation failed');
-    return showMessage('Security validation failed. Please refresh the page and try again.', 'error');
-  }
-  
-  // Check minimum time requirement (anti-bot measure)
+
   const submitDuration = Date.now() - formSubmitTime;
   if (submitDuration < SECURITY.TIME_LIMIT) {
     return showMessage('Please take your time to fill out the form', 'error');
@@ -144,14 +128,13 @@ const sendEmail = async (e) => {
   submitBtn.disabled = true;
 
   try {
-    // Add honeypot field (hidden from users but visible to bots)
+    // Honeypot check (hidden from users, visible to bots)
     const honeypot = document.createElement('input');
     honeypot.type = 'text';
     honeypot.name = 'honeypot';
     honeypot.style.display = 'none';
     contactForm.appendChild(honeypot);
 
-    // If honeypot is filled, it's likely a bot
     if (honeypot.value) {
       throw new Error('Bot detected');
     }
@@ -166,23 +149,17 @@ const sendEmail = async (e) => {
 
     showMessage('Message sent successfully ✔️', 'success');
     
-    // Reset form
     contactForm.reset();
     formSubmitTime = 0;
     
-    // Add to localStorage to prevent rapid submissions
     localStorage.setItem('lastFormSubmission', Date.now());
   } catch (error) {
     console.error('Error:', error);
     showMessage('Failed to send message. Please try again later.', 'error');
-    
-    // For security, don't reveal specific errors to users
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Detailed error:', error);
-    }
   } finally {
     submitBtn.textContent = originalBtnText;
     submitBtn.disabled = false;
+    const honeypot = contactForm.querySelector('input[name="honeypot"]');
     if (honeypot) honeypot.remove();
   }
 };
@@ -200,7 +177,6 @@ const showMessage = (msg, type) => {
     contactMessage.classList.remove('color-dark');
   }
   
-  // Clear message after 5 seconds
   setTimeout(() => {
     if (contactMessage.textContent === msg) {
       contactMessage.textContent = '';
@@ -218,7 +194,7 @@ contactForm.addEventListener('input', () => {
 // Prevent rapid form submissions
 contactForm.addEventListener('submit', (e) => {
   const lastSubmission = localStorage.getItem('lastFormSubmission');
-  if (lastSubmission && Date.now() - lastSubmission < 30000) { // 30 second cooldown
+  if (lastSubmission && Date.now() - lastSubmission < 30000) {
     e.preventDefault();
     showMessage('Please wait before submitting another message', 'error');
     return false;
@@ -229,7 +205,7 @@ contactForm.addEventListener('submit', (e) => {
 // Attach the secure submit handler
 contactForm.addEventListener('submit', sendEmail);
 
-/*===============  Style Switcher =============*/
+/*=============== Style Switcher =============*/
 const styleSwitcherToggle = document.querySelector('.style__switcher-toggler'),
     styleSwitcher = document.querySelector('.style__switcher');
 
@@ -237,7 +213,6 @@ styleSwitcherToggle.addEventListener('click', () => {
     styleSwitcher.classList.toggle('open');
 });
 
-// hide switcher on scroll 
 window.addEventListener('scroll', () => {
     if (styleSwitcher.classList.contains('open')) {
         styleSwitcher.classList.remove('open');
@@ -255,7 +230,8 @@ function setActiveStyle(color) {
         }
     });
 }
-// Add this to common.js
+
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -295,7 +271,7 @@ function shareOnLinkedIn() {
     window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`, '_blank', 'width=600,height=400');
 }
 
-// Add click event to toggle share options
+// Share button toggle
 document.addEventListener('DOMContentLoaded', function() {
     const shareButton = document.querySelector('.share-button');
     if (shareButton) {
