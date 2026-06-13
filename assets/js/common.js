@@ -37,6 +37,12 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader);
 
 /*=============== Secure Contact Form =============*/
+
+// Initialize EmailJS with public key
+document.addEventListener('DOMContentLoaded', () => {
+    emailjs.init(window.appConfig.emailjs.publicKey);
+});
+
 const contactForm = document.getElementById('contact-form');
 const contactName = document.getElementById('contact-name');
 const contactEmail = document.getElementById('contact-email');
@@ -139,11 +145,11 @@ const sendEmail = async (e) => {
       throw new Error('Bot detected');
     }
 
-    // Send email via EmailJS
+    // Send email via EmailJS - using actual form element, not string selector
     await emailjs.sendForm(
       window.appConfig.emailjs.serviceId,
       window.appConfig.emailjs.templateId,
-      window.appConfig.emailjs.formId,
+      document.getElementById('contact-form'),
       window.appConfig.emailjs.publicKey
     );
 
